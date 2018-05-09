@@ -1,129 +1,206 @@
+/* Header */
+
 *{
-  margin: 0 auto;
-  padding: 0;
+  margin: 0;
   font-family: georgia;
   font-size: 17px;
+  color: #000;
 }
 
-.header{
-  display: inline-flex;
-  position:fixed;
-  font-family: verdana;
+a{
+  color: black;
+  font-family: verdana, sans-serif;
   font-size: 14px;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+nav span{
+  display:inline-block;
+  padding: 20px 10px;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  position:fixed;
   font-weight: bold;
   border-bottom: 1px solid #000;
   width: 100%;
-  padding: 10px 20px;
-  align-items: center;
-  justify-content: space-between;
+  height:100px;
   background-color: #fff;
   z-index: 2;
 }
 
-h1{
-  font-size: 14px;
+.logo{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 30px;
+}
+
+.logo img{
+  width: 70px;
+  height: 60px;
+  margin-right: 12px;
+}
+
+.logo span{
   color: mediumaquamarine;
-  flex: 1 1 auto;
-  padding-left: 15px;
-  font-family: verdana;
+  font-family: verdana, sans-serif;
+  font-size: 14px;
 }
 
-.header ul{
-  flex: 3 3 auto;
-  text-align: right;
-  padding-right: 40px;
-}
-
-.header li{
-  display:inline-block;
-  list-style: none;
-  padding: 0px 15px;
-}
-
-li a{
-  color: black;
-  font-family: verdana;
-}
+/* Columns */
 
 .container{
   display: flex;
-  justify-content: space-around;
-  position: relative;
-  top: 100px;
+  width: 1250px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-top: 120px;
 }
 
-.large{
-  width: 630px;
-  display:flex;
-  flex-direction: column;
-}
-
-.medium{
-  width: 300px;
+.column{
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
-.small{
-  width: 240px;
-  display: flex;
-  flex-direction: column;
-}
+/*stories*/
 
 .stories{
-  display:flex;
-  flex-wrap: wrap;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 600px
+  margin-top: 15px;
 }
 
-.headline1{
-  background-image: url(../../resources/images/img-story-main.png);
-  margin-bottom: 20px;
+.stories .text-story{
+  height: 250px;
 }
 
-.headline2{
-  background-image: url(../../resources/images/img-story-2.png);
+.article{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
 }
 
-.headline3{
-  background-image: url(../../resources/images/img-story-3.png);
+.story{
+  margin-top: 15px;
 }
 
-.headline4{
-  background-image: url(../../resources/images/img-story-1.png);
-}
-
-.headline1, .headline2, .headline3, .headline4{
-  background-size: cover;
-  background-repeat: no-repeat;
+.pic-story{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 300px;
 }
 
-h2{
-  color: #fff;
+.pic-story span{
   font-weight: bold;
-  font-family: georgia;
   font-size: 30px;
+  color: #fff;
   text-align: center;
 }
 
-.headline1 h2 {
-  font-size: 40px;
-}
+/*large column*/
 
-.main,{
-  display: flex;
+.column.large{
   width: 630px;
 }
 
-.article, .headline2, .headline3{
-  width:300px;
+.main .pic-story{
+  background-image: url("../../resources/images/img-story-main.png");
+  width: 630px;
+  margin-top: 0;
+  color: #fff;
 }
 
-p{
-  font-family: Georgia;
-  font-size: 17px;
-  color: black;
+.main span{
+  font-size: 40px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.earth-spins.pic-story{
+  background-image: url("../../resources/images/img-story-2.png");
+}
+
+.cameras-erase.pic-story{
+  background-image: url("../../resources/images/img-story-3.png");
+}
+
+
+/*medium column*/
+
+.column.medium{
+  width: 300px;
+}
+
+.cat-control.pic-story{
+  background-image: url("../../resources/images/img-story-1.png");
+}
+
+/*small column*/
+
+.column.small{
+  width: 240px;
+}
+
+img.cookie{
+  height:240px;
+}
+
+.news-bites h3{
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.news-bites .bite{
+  display: block;
+  padding: 15px 20px;
+  margin-bottom: 7px;
+  background-color: whitesmoke;
+  font-family: "Verdana", sans-serif;
+  font-size: 12px;
+  color: dimgray;
+}
+
+.bite span{
+  padding-left: 10px;
+}
+
+/* Footer */
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  background-color: mediumaquamarine;
+  margin: 0 auto;
+  font-family: "Verdana", sans-serif;
+  font-size: 12px;
+}
+
+footer .title{
+  display: inline-block;
+  padding-right: 25px;
+  border-right: 2px solid #fff;
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+footer nav{
+  display: inline-block;
+  padding-left: 25px;
 }
